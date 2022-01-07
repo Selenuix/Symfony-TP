@@ -11,5 +11,17 @@
     <div class="example-wrapper">
         <h1>Admin Projects</h1>
 
+        <div>
+            <a href="{{ path('admin_project_add') }}">Add</a>
+        </div>
+
+        <div>
+            {% for project in projects %}
+                <p>{{ project.name }}
+                    <a href="{{ path('admin_project_edit', {id: project.id}) }}">Edit</a>
+                    <a href="{{ path('admin_project_delete', {id: project.id}) }}">Delete</a>
+                </p>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

@@ -10,6 +10,7 @@
 
 <div class="example-wrapper">
     <h1>{{ project.name }}</h1>
+    <p>{{ project.createdAt|date("d/m/Y") }}</p>
 
     {% if project.preview is not null %}
     <img src="{{ asset("images/projects/") ~ project.preview }}" alt="Preview of {{ project.name }}"
