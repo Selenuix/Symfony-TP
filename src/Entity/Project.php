@@ -35,9 +35,9 @@ class Project
     private $preview;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime_immutable")
      */
-    private $creation_date;
+    private $created_at;
 
     /**
      * @ORM\ManyToMany(targetEntity=Category::class, mappedBy="projects")
@@ -90,14 +90,14 @@ class Project
         return $this;
     }
 
-    public function getCreationDate(): ?\DateTimeInterface
+    public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->creation_date;
+        return $this->created_at;
     }
 
-    public function setCreationDate(\DateTimeInterface $creation_date): self
+    public function setCreatedAt(\DateTimeImmutable $created_at): self
     {
-        $this->creation_date = $creation_date;
+        $this->created_at = $created_at;
 
         return $this;
     }

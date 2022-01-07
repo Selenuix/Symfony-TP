@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Project;
 
 class GeneralController extends AbstractController
 {
@@ -13,9 +15,7 @@ class GeneralController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('index.html.twig', [
-            'controller_name' => 'GeneralController',
-        ]);
+        return $this->render('index.html.twig');
     }
 
     /**
