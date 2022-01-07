@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProjectsController extends AbstractController
 {
     /**
-     * @Route("/", name="projects")
+     * @Route("/", name="projects_index")
      */
     public function index(ManagerRegistry $doctrine): Response
     {
@@ -27,13 +27,15 @@ class ProjectsController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}", name="project")
+     * @Route("/{id}", name="project_show")
      */
-    public function show($slug): Response
+    public function showProject($id, ManagerRegistry $doctrine): Response
     {
-        return $this->render('projects/show.html.twig', [
-            'controller_name' => 'ProjectsController',
-            'slug' => $slug,
-        ]);
+	    $repository = $doctrine->getRepository(Project::class);
+	    $project = $repository->find($id);
+
+	    return $this->render('projects/show.html.twig', [
+		    "project" => $project,
+	    ]);
     }
 }
