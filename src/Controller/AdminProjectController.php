@@ -9,8 +9,18 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin")
 */
-class AdminController extends AbstractController
+class AdminProjectController extends AbstractController
 {
+	/**
+	 * @Route("/projects/", name="admin_project_index")
+	 */
+	public function projectsIndex(): Response
+	{
+		return $this->render('admin/projects/index.html.twig', [
+			'method' => 'Index',
+		]);
+	}
+
     /**
      * @Route("/projects/add/", name="admin_project_add")
      */

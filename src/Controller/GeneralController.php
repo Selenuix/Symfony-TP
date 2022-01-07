@@ -13,9 +13,14 @@ class GeneralController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
-        return $this->render('index.html.twig');
+        $repository = $doctrine->getRepository(Project::class);
+		$projects = $repository->findAll();
+
+        return $this->render('index.html.twig', [
+            'projects' => $projects,
+        ]);
     }
 
     /**
