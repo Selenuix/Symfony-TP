@@ -56,8 +56,8 @@ class AdminProjectController extends AbstractController
     public function edit(ManagerRegistry $doctrine, Request $request, $id): Response
     {
 	    $repository = $doctrine->getRepository(Project::class);
-	    $category = $repository->find($id);
-	    $form = $this->createForm(ProjectType::class, $category);
+	    $project = $repository->find($id);
+	    $form = $this->createForm(ProjectType::class, $project);
 
 	    $form->handleRequest($request);
 	    if ($form->isSubmitted() && $form->isValid()) {

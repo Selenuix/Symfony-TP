@@ -11,5 +11,18 @@
     <div class="example-wrapper">
         <h1>Admin Categories</h1>
 
+        <div>
+            <a href="{{ path('admin_categories_add') }}">Add</a>
+        </div>
+
+        <div>
+            {% for category in categories %}
+                <p>{{ category.name }}
+                    <a href="{{ path('admin_categories_edit', {id: category.id}) }}">Edit</a>
+                    <a href="{{ path('admin_categories_delete', {id: category.id}) }}">Delete</a>
+                </p>
+            {% endfor %}
+        </div>
+
     </div>
 {% endblock %}
