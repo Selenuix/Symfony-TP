@@ -31,3 +31,8 @@ body > header > nav > div{
     justify-content: space-around;
     /* width: 30%; */
 }
+
+#contact{
+    display:flex;
+    justify-content: center;
+}
