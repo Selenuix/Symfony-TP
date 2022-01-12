@@ -17,7 +17,7 @@
 
         <div>
             {% for project in projects %}
-                <p>{{ project.name }}
+                <p>{{project.name}}
                     <a href="{{ path('admin_project_edit', {id: project.id}) }}">Edit</a>
                     <a href="{{ path('admin_project_delete', {id: project.id}) }}">Delete</a>
                 </p>

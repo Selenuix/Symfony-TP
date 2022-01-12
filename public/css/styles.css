@@ -1,0 +1,26 @@
+body > div.example-wrapper > h1{
+    color: white;
+    text-align: center;
+}
+body{
+    background: #5F9081;
+}
+
+p{
+    color: white;
+}
+body > div.example-wrapper > div:nth-child(2){
+
+    text-align: center ;
+    border: 1px solid white;
+    background:goldenrod;
+    color: white;
+}
+body > div.example-wrapper > div:nth-child(2) > a{
+    font-size: 3rem;
+}
+body > div.example-wrapper > div:nth-child(3) > p{
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
