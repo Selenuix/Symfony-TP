@@ -13,8 +13,9 @@ body > div.example-wrapper > div:nth-child(2){
 
     text-align: center ;
     border: 1px solid white;
-    background:goldenrod;
+    background:white;
     color: white;
+    border-radius: 10px;
 }
 body > div.example-wrapper > div:nth-child(2) > a{
     font-size: 3rem;
