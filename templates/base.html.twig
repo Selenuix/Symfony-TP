@@ -18,6 +18,22 @@
         {% endblock %}
     </head>
     <body>
+
+    <header>
+        <nav>
+            <div>
+
+                <a href="{{ asset('admin/projects') }}">Projet</a>
+                <a href="{{ asset('admin/categories') }}">Catégorie</a>
+
+
+            </div>
+        </nav>
+    </header>
+
+
+
         {% block body %}{% endblock %}
+
     </body>
 </html>

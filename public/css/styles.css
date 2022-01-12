@@ -25,3 +25,9 @@ body > div.example-wrapper > div:nth-child(3) > p{
     display: flex;
     flex-direction: column;
 }
+
+body > header > nav > div{
+    display: flex;
+    justify-content: space-around;
+    /* width: 30%; */
+}
