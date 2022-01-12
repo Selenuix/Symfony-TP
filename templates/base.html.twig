@@ -22,16 +22,12 @@
     <header>
         <nav>
             <div>
-
-                <a href="{{ asset('admin/projects') }}">Projet</a>
-                <a href="{{ asset('admin/categories') }}">Catégorie</a>
-
-
+                <a href="{{ path('projects_index') }}">Projects</a>
+                <a href="{{ path('about') }}">About</a>
+                <a href="{{ path('contact') }}">Contact</a>
             </div>
         </nav>
     </header>
-
-
 
         {% block body %}{% endblock %}
 
